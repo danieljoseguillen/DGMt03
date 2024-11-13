@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/Css/style.css}">
+    <title>Enlaces externos</title>
+</head>
+<body>
+    <header><a th:href="@{/}">Inicio</a><a th:href="@{/galeria}">Galería de fotos</a><a th:href="@{/premios}">Premios</a><a th:href="@{/enlaces}">Enlaces externos</a></header>
+    <section class="contenido">
+    <nav></nav>
+        <main><center><h1>Enlaces externos</h1></center>
+            <ul>
+            <li><a th:href="@{https://www.sabaton.net/}">Pagina principal de Sabaton</a></li>
+                <li><a th:href="@{https://es.wikipedia.org/wiki/Sabaton}">Pagina de wikipedia</a></li>
+                <li><a th:href="@{https://www.youtube.com/channel/UCjQhd1APsd5NQhiVZV7GYzg}">Canal de Youtube</a></li>
+                <li><a th:href="@{https://www.youtube.com/@SabatonHistory}">Canal de historia</a></li>
+            </ul>
+        </main>
+            <aside></aside>
+        </section>
+    <footer></footer>
+</body>
+</html>

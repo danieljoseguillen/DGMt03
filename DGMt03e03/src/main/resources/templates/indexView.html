@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="~{/fragments.html::cabecera}"></head>
+    <!--<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/Css/style.css}">
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <script src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+    --><title>Pagina de inicio</title>
+</head>
+<body id="nobgi">
+    <header th:replace="~{/fragments.html::navbar}"></header>
+    <section class="contenido">
+    <nav></nav>
+        <main>
+            <br><br>
+            <!--Un chiste, el cantante se da en la rodilla (o hace parecer) cuando canta-->
+            <p th:if="${nombre=='Joakim'}">Bienvenido a la pagina <span th:text="${nombre}"></span>, como está tu rodilla?</p>
+            <p th:if="${nombre!='' && nombre!='Joakim'}">Bienvenido a la pagina <span th:text="${nombre}"></span>.</p>
+            <p th:unless="${nombre!=''}">Bienvenido.</p>
+            <br>
+            <center><img class="percent80" th:src="@{/Media/https___www.sabaton.net_wp-content_uploads_2020_07_Logotype-1000x375-1.png}"></center>
+            <br><br><br>
+            <p class="justify">Sabaton es una banda sueca de power metal formada en 1999 en la ciudad de Falun. El grupo se caracteriza por su estética militarizada y sus letras de contenido histórico-bélico. Su nombre proviene de una pieza de armadura medieval que cubre el empeine del pie, llamada escarpe en español.</p>
+            <p>Actualmente cuentan con <b th:text="${annos}">20</b> años de trayectoria.</p>
+            <br>
+            <h3>Historia</h3>
+            <section>
+            <p>Daniel Mullback y Pär Sundström comenzaron con la idea de formar una banda de Death metal, pero cambiaron de idea y prefirieron el Power metal. Pronto les presentaron a Joakim Brodén, como teclista, y un poco más tarde entró Oskar Montelius como segunda guitarra a formar parte de la banda. Así nació Sabaton que comenzó su andadura en 1999 con Joakim como cantante y teclista. Después de grabar sus primeras canciones en el legendario estudio The Abyss contactaron con algunas casas discográficas y decidieron firmar con un sello italiano (Underground Symphony) bajo el cual lanzaron internacionalmente el disco promocional "Fist For Fight" (una recopilación de material de dos demos grabadas entre 1999 y 2000), con la intención de promocionar nuevas publicaciones. Este disco tiene una temática variada.</p>
+            <p>Un año después de esas primeras grabaciones, Sabaton vuelve a Abyss, trabajando nuevamente con Peter Tägtgren en el álbum debut de la banda: "Metalizer".
+            </p>
+            <p>Durante este tiempo Sabaton fueron de gira por toda Suecia y, después de dos años esperando en vano que su sello sacara el álbum, deciden romper el contrato para autoproducirse su siguiente trabajo, por lo que vuelven a Abyss por tercera vez a grabar el álbum "Primo Victoria", que resulta ser incluso más potente de lo esperado y rápidamente la banda se encuentra envuelta en negociaciones con varios sellos internacionales. Con el disco finalmente en sus manos, Sabaton pudo elegir los términos del contrato y, después de meses de negociaciones, la banda decidió unirse a las filas de Black Lodge, la división de metal de Sound Pollution. Este fue el sello con el que trabajaron también en sus siguientes discos. "Primo Victoria" es el primero que basa todas sus letras en eventos bélicos históricos. La letra de su último tema "Metal Machine" está realizada con títulos de canciones famosas de bandas de metal.
+            </p>
+            <p>A principios de 2005 entra en la banda Daniel Mÿhr como teclista, quedando Joakim Brodén como cantante.</p>
+            <p>Su cuarto álbum (tercero publicado) titulado Attero Dominatus, continúa el tema bélico de Primo Victoria con canciones como "Back in Control" (guerra de las Malvinas), "Attero Dominatus" (sobre la toma de Berlín por el ejército soviético) o "Angel's Calling" (guerra de trincheras durante la Primera Guerra Mundial) y fue lanzado en Europa el 28 de julio de 2006. Aquí, al igual que en "Primo Victoria" la letra de su tema final "Metal Crüe" está compuesta esta vez con nombres de famosas bandas dentro del metal.
+            </p>
+            <p>Tras este disco y su correspondiente gira por Europa la banda vuelve al estudio para regrabar "Metalizer", que dio a luz en 2007 después de que Black Lodge comprara los derechos de este trabajo y de "Fist For Fight" a Underground Symphony. De hecho la primera edición del álbum lleva como regalo un bonus CD con las demos de "Fist For Fight" y algunos temas con la mezcla original de "Metalizer".
+            </p>
+            <p>Desde 2008, la banda organiza el Sabaton Open Air (llamado Rockstad: Falun previo al 2014), un festival que se celebra cada verano en Falun, Suecia. En el mismo año salió a la luz "The Art Of War", del cual existe una edición especial en caja de DVD, con una portada alternativa y acompañado del propio libro de Sun Tzu que da título al disco. El tema "40:1" sobre la Batalla de Wizna alcanzó un gran éxito en Polonia, lo cual provocó que en 2008 tocaran en los festejos del día de la independencia polaca, y que el luchador polaco Damian Grabowski la utilizara como intro para sus combates. Ese mismo año, el entonces arzobispo de la ciudad de Gdansk Sławoj Leszek Głódź le otorgó al grupo un auténtico sable polaco de oficial, esto debido a que la banda había destacado a los soldados polacos en algunas de sus canciones. Tras la publicación de este álbum es confirmada la presencia de la banda en festivales internacionales durante 2009 así como giras por Europa como teloneros de bandas como Hammerfall y Dragonforce, lo que llevó a Sabaton a retrasar la grabación de su siguiente álbum prevista para octubre de ese mismo año.
+            </p>
+            <p>El miércoles 23 de diciembre de 2009 la banda anunció el título de su próximo álbum, Coat Of Arms, siendo la mayoría de las canciones sobre la Segunda Guerra Mundial, pero incluyendo también algunas sobre otras guerras, como la Guerra de Invierno "Talvisota". Coat of Arms fue lanzado el 21 de mayo de 2010 cambiando de compañía discográfica y firmando con el sello Nuclear Blast con el que se mantienen hasta la actualidad (Heroes 2014). El primer video musical, Uprising, fue lanzado el 1 de agosto de 2010 con la participación de Peter Stormare, acompañado de una gira europea. Screaming Eagles, fue el segundo video del álbum, lanzado el 25 de mayo.
+            </p>
+            <p>En 2010 el grupo reeditó sus cuatro primeros álbumes, incluyendo temas nuevos inéditos hasta la fecha.[cita requerida] En el mismo año también se inauguró el Sabaton Cruise, un festival de 24 horas a bordo de un barco crucero organizado y encabezado por la banda. Las entradas para este festival se agotaron en todas sus ediciones hasta 2014 inclusive, y siempre se realiza en noviembre o diciembre. La última edición tuvo lugar del 13 al 15 de diciembre de 2023.
+            </p>
+            <p>En marzo de 2012, el grupo anuncia que cuatro de sus miembros han decidido abandonar para comenzar nuevos caminos, quedando solo Joakim Brodén y Pär Sundström.
+            </p>
+                <p>En abril del mismo año, se reveló la nueva formación. Se unen a la banda Chris Rörland (Guitarra líder), Thobbe Englund (Guitarra) y Robban Bäck (Batería). Sin tecladista es Joakim Brodén quien asume de nuevo ese lugar además de la voz. A la vez que se anunciaba la nueva formación se publicaba el primer sencillo del nuevo álbum, titulado "Carolus Rex" al igual que la obra completa, y gira europea como cabezas de cartel bajo el nombre "The Swedish Empire Tour".
+                </p>
+                <p>En mayo de 2012, fue lanzado el séptimo disco de su carrera Carolus Rex, el cual había sido grabado íntegramente por los antiguos miembros de la banda.
+                </p>
+                <p>En noviembre de 2012 el baterista Robban Bäck deja la banda porque está a punto de ser padre, siendo sustituido por Snowy Shaw durante el resto de las actuaciones en directo. Un año más tarde Hannes Van Dahl, pasa a formar parte de Sabaton como nuevo batería.
+                </p>
+            <p>En mayo de 2014 se lanza su último disco Héroes, cuya temática se centra en héroes de guerra: personajes con nombres y apellidos, en lugar de escenas generales. Este álbum consiguió ser número uno de las listas oficiales de éxitos suecos. Tras lo cual volvieron a anunciar gira mundial como teloneros de Amon Amarth por Norteamérica y como cabezas de cartel en el resto de la gira.
+            </p>
+            <p>El 29 de abril de 2016, a través de su página web el grupo anunció que estaba en proceso de grabación un nuevo álbum que "Marcara un nuevo capítulo en la historia de Sabaton" el cual saldría a la luz el 19 de agosto de ese año y tendría por nombre "The Last Stand". Se anuncia también la gira de 2017 por Europa, llamada The Last Tour, donde tendrán como teloneros al grupo Accept.
+            </p>
+
+            <p>El 6 de junio de 2016, la empresa Paradox Interactive incluyó varias canciones de la banda en un DLC para el videojuego Hearts of Iron IV, con motivo de commemoración de la fecha del día D. Otras canciones fueron incluidas en un DLC del juego Europa Universalis IV.</p>
+                </section>
+        </main>
+            <aside></aside>
+        </section>
+    <footer></footer>
+</body>
+</html>

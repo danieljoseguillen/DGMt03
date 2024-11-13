@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <th:block th:fragment="cabecera">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" th:href="@{/Css/style.css}">
+        <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+        <script src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+    </th:block>
+<body>
+    <header th:fragment="navbar"><a th:href="@{/}">Inicio</a><a th:href="@{/galeria}">Galería de fotos</a><a th:href="@{/premios}">Premios</a><a th:href="@{/enlaces}">Enlaces externos</a></header>
+</body>
+</html>

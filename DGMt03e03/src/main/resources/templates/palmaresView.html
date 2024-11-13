@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="~{/fragments.html::cabecera}"></head>
+    <title>Premios y nominaciones</title>
+</head>
+<body>
+    <header th:replace="~{/fragments.html::navbar}"></header>    <section class="contenido">
+    <nav></nav>
+        <main><center><h1>Premios obtenidos</h1></center>
+            <table class="percent80 t1b">
+                <caption class="t1b">Metal Hammer Awards</caption>
+                <tr>
+                    <th>Año</th>
+                    <th>Nominado</th>
+                    <th>Premio</th>
+                    <th>Resultado</th>
+                </tr>
+                <tr th:each="premio:${list1}">
+                    <td th:each="obj:${premio}"><span th:text="${obj}"></span></td>
+                </tr>
+            </table>
+            <br><br><br>
+             <table class="percent80 t1b">
+                <caption class="t1b">Bandit Rock Awards</caption>
+                <tr>
+                    <th>Año</th>
+                    <th>Nominado</th>
+                    <th>Premio</th>
+                    <th>Resultado</th>
+                </tr>
+                <tr th:each="premio:${list2}">
+                    <td th:each="obj:${premio}"><span th:text="${obj}"></span></td>
+                </tr>
+            </table>
+            <br><br><br>
+             <table class="percent80 t1b">
+                <caption class="t1b"><b>Rockbjörnen</b></caption>
+                <tr>
+                    <th>Año</th>
+                    <th>Nominado</th>
+                    <th>Premio</th>
+                    <th>Resultado</th>
+                </tr>
+                <tr th:each="premio:${list3}">
+                    <td th:each="obj:${premio}"><span th:text="${obj}"></span></td>
+                </tr>
+            </table>
+            <br><br><br>
+            <table class="percent80 t1b">
+                <caption class="t1b"><b>Föreningen Vetenskap och Folkbildning</b></caption>
+                <tr>
+                    <th>Año</th>
+                    <th>Nominado</th>
+                    <th>Premio</th>
+                    <th>Resultado</th>
+                </tr>
+                <tr th:each="premio:${list4}">
+                    <td th:each="obj:${premio}"><span th:text="${obj}"></span></td>
+                </tr>
+            </table>
+        </main>
+            <aside></aside>
+        </section>
+    <footer></footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/Css/style.css}">
+    <title>Premios y nominaciones</title>
+</head>
+<body>
+    <header><a th:href="@{/}">Inicio</a><a th:href="@{/galeria}">Galería de fotos</a><a th:href="@{/premios}">Premios</a><a th:href="@{/enlaces}">Enlaces externos</a></header>
+    <section class="contenido">
+    <nav></nav>
+        <main><center><h1>Premios obtenidos</h1></center>
+            <table class="percent80 t1b">
+                <caption class="t1b">Metal Hammer Awards</caption>
+                <tr>
+                    <th>Año</th>
+                    <th>Nominado</th>
+                    <th>Premio</th>
+                    <th>Resultado</th>
+                </tr>
+                <tr th:each="premio:${list1}">
+                    <td th:each="obj:${premio}"><span th:text="${obj}"></span></td>
+                </tr>
+            </table>
+            <br><br><br>
+             <table class="percent80 t1b">
+                <caption class="t1b">Bandit Rock Awards</caption>
+                <tr>
+                    <th>Año</th>
+                    <th>Nominado</th>
+                    <th>Premio</th>
+                    <th>Resultado</th>
+                </tr>
+                <tr th:each="premio:${list2}">
+                    <td th:each="obj:${premio}"><span th:text="${obj}"></span></td>
+                </tr>
+            </table>
+            <br><br><br>
+             <table class="percent80 t1b">
+                <caption class="t1b"><b>Rockbjörnen</b></caption>
+                <tr>
+                    <th>Año</th>
+                    <th>Nominado</th>
+                    <th>Premio</th>
+                    <th>Resultado</th>
+                </tr>
+                <tr th:each="premio:${list3}">
+                    <td th:each="obj:${premio}"><span th:text="${obj}"></span></td>
+                </tr>
+            </table>
+            <br><br><br>
+            <table class="percent80 t1b">
+                <caption class="t1b"><b>Föreningen Vetenskap och Folkbildning</b></caption>
+                <tr>
+                    <th>Año</th>
+                    <th>Nominado</th>
+                    <th>Premio</th>
+                    <th>Resultado</th>
+                </tr>
+                <tr th:each="premio:${list4}">
+                    <td th:each="obj:${premio}"><span th:text="${obj}"></span></td>
+                </tr>
+            </table>
+        </main>
+            <aside></aside>
+        </section>
+    <footer></footer>
+</body>
+</html>
